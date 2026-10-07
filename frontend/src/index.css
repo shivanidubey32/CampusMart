@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5D4037; /* Brown */
+  --color-secondary: #FFC107; /* Yellow */
+  --color-accent-success: #388E3C;
+  --color-accent-notification: #FF6161;
+  
+  /* Backgrounds */
+  --color-bg-main: #F8F9FA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-hover: #F2EBE9; /* Light brown tint for hover */
+  
+  /* Borders */
+  --color-border: #E0E0E0;
+  
+  /* Text */
+  --color-text-main: #212121;
+  --color-text-muted: #757575;
+
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+body, input, select, textarea, button, a {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A8A8;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 4px;
+}
+
+/* Base Inputs & Buttons resets */
+input, select, textarea {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  border-color: var(--color-border);
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
